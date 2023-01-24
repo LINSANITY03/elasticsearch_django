@@ -27,4 +27,4 @@ jobs:
         pip install -r require.txt
     - name: Run Tests
       run: |
-        python manage.py test app.tests
+        python search_practice/manage.py test app.tests
