@@ -16,6 +16,12 @@ jobs:
         python-version: ['3.10']
       
     services:
+      elastic_search:
+        image: elasticsearch:7.17.8
+        volumes:
+          - elasticsearch-data:/usr/share/elasticsearch/data
+        ports:
+          - 9200:9200
       # Label used to access the service container
       postgres:
         # Docker Hub image
