@@ -60,10 +60,15 @@ jobs:
 
       # Performs a clean installation of all dependencies in the `package.json` file
       # For more information, see https://docs.npmjs.com/cli/ci.html
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r require.txt
 
       - name: Connect to PostgreSQL
         # Runs a script that creates a PostgreSQL table, populates
         # the table with data, and then retrieves the data
+        
         run: |
           python search_practice/manage.py test makemigrations
           && python search_practice/manage.py test migrate
