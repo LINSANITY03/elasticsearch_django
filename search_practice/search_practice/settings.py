@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8jxv8yt56k7ksw$qt#-5jg02$0&9p#lb69n3w@m$bkuwafmb$l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'search_practice.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'elasticsearch',
         'USER': 'postgres',
         'PASSWORD': 'postgresql1234',
